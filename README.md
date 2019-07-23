@@ -4,6 +4,7 @@ extractbits
 extract bits field with given bit offset from raw bytes
 
 ex)
+<pre>
 <code>
          bit7 bit6 bit5 bit4 bit3 bit2 bit1 bit0
 byte 0  |      Header       |  length |  field1 |
@@ -25,5 +26,5 @@ byte 4  | field4   |       field5               |
     field4 = extractWord(data, 2, 2, 12);
     field5 = extractWord(data, 4, 5, 6);
 </code>
-
+</pre>
 
