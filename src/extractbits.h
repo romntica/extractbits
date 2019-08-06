@@ -4,10 +4,10 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-int extractByte(uint8_t data[], int byteOffset, int bitOffset, int bitLength);
-int extractWord(uint8_t data[], int byteOffset, int bitOffset, int bitLength);
-int extractDWord(uint8_t data[], int byteOffset, int bitOffset, int bitLength);
+int extractBits(const uint8_t data[], int byteOffset, int bitOffset, int bitLength, uint8_t *dest);
+int extractByte(const uint8_t data[], int byteOffset, int bitOffset, int bitLength);
+int extractWord(const uint8_t data[], int byteOffset, int bitOffset, int bitLength);
+int extractDWord(const uint8_t data[], int byteOffset, int bitOffset, int bitLength);
 
 #ifdef __cplusplus
 }
