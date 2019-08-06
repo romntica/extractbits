@@ -25,6 +25,11 @@ byte 4  | field4   |       field5               |
     f3 = extractByte(data, 1, 0, 6);
     field4 = extractWord(data, 2, 2, 12);
     field5 = extractWord(data, 4, 5, 6);
+    // dest will store data as LSByte order. 
+    // byte 0 : byte 4(bit 6, 7) and byte 3(bit 5 4 3 2 1 0), 
+    // byte 1 : byte 3(bit 7, 6) and byte 2(bit 2 1 0)
+    uint8_t dest[100];
+    field4lsb = extractBits(data, 2, 2, 12, dest);
 </code>
 </pre>
 
